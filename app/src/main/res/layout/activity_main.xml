@@ -74,24 +74,32 @@
             android:layout_height="wrap_content"
             android:text="SH"
             android:id="@+id/btn_show" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="C1"
+            android:id="@+id/btn_custom1" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="C2"
+            android:id="@+id/btn_custom2" />
     </LinearLayout>
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <FrameLayout
+        <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/image_beach"
-                android:layout_gravity="left|top"
-                android:src="@drawable/beach" />
-        </FrameLayout>
+            android:id="@+id/image_beach"
+            android:layout_gravity="left|top"
+            android:src="@drawable/beach" />
     </FrameLayout>
 
 </LinearLayout>

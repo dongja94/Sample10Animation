@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+import android.view.animation.Interpolator;
 import android.widget.Button;
 import android.widget.ImageView;
 
@@ -95,6 +96,41 @@ public class MainActivity extends AppCompatActivity {
                 Animation anim = AnimationUtils.loadAnimation(MainActivity.this, R.anim.slide_left_in);
                 animationView.setVisibility(View.VISIBLE);
                 animationView.startAnimation(anim);
+            }
+        });
+
+        btn = (Button)findViewById(R.id.btn_custom1);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                Animation anim = AnimationUtils.loadAnimation(MainActivity.this, R.anim.slide_left_in);
+//                animationView.setVisibility(View.VISIBLE);
+                MyAnimation anim = new MyAnimation();
+                anim.setDuration(1000);
+
+                Interpolator interpolator = AnimationUtils.loadInterpolator(MainActivity.this, android.R.anim.bounce_interpolator);
+                anim.setInterpolator(interpolator);
+                anim.setFillAfter(true);
+                animationView.startAnimation(anim);
+
+            }
+        });
+
+        btn = (Button)findViewById(R.id.btn_custom2);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+//                Animation anim = AnimationUtils.loadAnimation(MainActivity.this, R.anim.slide_left_in);
+//                animationView.setVisibility(View.VISIBLE);
+                My3DAnimation anim = new My3DAnimation();
+                anim.setDuration(1000);
+
+                Interpolator interpolator = AnimationUtils.loadInterpolator(MainActivity.this, android.R.anim.bounce_interpolator);
+                anim.setInterpolator(interpolator);
+                anim.setFillAfter(true);
+
+                animationView.startAnimation(anim);
+
             }
         });
 
